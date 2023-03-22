@@ -3,8 +3,9 @@
 
 
 .contenido-contacto {
-    
+
     @include mix.tablet { 
+        
         @include mix.grid( 2, var.$separacion );
         background-image: url(../img/granos_cafe.jpg);
         background-repeat: no-repeat;
@@ -14,7 +15,6 @@
 }
 
 .formulario {
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
