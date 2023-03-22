@@ -1,0 +1,22 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.contenido-menu {
+    @include mix.grid(1, var.$separacion );
+    background-image: url(../img/cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    aspect-ratio: 3 / 8;
+    
+    @include mix.mobile { 
+        aspect-ratio: 3 / 4;
+    }
+
+    @include mix.desktop { 
+        @include mix.grid(2, var.$separacion );
+        aspect-ratio: 16 / 6;
+        background-size: 50%;
+        background-position: bottom right;
+    }
+}
