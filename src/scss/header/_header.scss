@@ -5,6 +5,9 @@
 
 .header {
     padding: var.$separacion 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     @include mix.mobile { 
         padding-left: 5rem;
@@ -19,9 +22,10 @@
 // Header de cada página
 .header-inicio {
     background-image: linear-gradient( rgba(0,0,0, 0.6), rgba(0,0,0, 0.6) ), url(../img/header_inicio.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+}
+
+.header-nosotros {
+    background-image: linear-gradient( rgba(0,0,0, 0.6), rgba(0,0,0, 0.6) ), url(../img/header_nosotros.jpg);
 }
 
 

@@ -47,6 +47,7 @@ const dev = () => {
 
 
 
+exports.dev = dev
 exports.css = css
 exports.dev = dev
 exports.imagenes = imagenes

@@ -1,0 +1,30 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.contenido-nosotros {
+
+    @include mix.grid( 1, 5rem );
+    
+    @include mix.tablet { 
+        @include mix.grid( 2, 5rem );
+    }
+
+    .figure {
+        
+        .imagen {
+            transform: rotate(-6deg);
+            border: 3rem solid var.$blanco;
+            box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+        }
+    }
+
+    .texto {
+
+        blockquote {
+            margin: 0;
+            padding: 1rem;
+            border-left: 0.5rem solid var.$primario;
+            font-size: 2rem;
+        }
+    }
+}
