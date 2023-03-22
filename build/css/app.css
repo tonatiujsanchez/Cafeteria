@@ -445,6 +445,14 @@ h3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header_menu.jpg);
 }
 
+.header-galeria {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header_galeria.jpg);
+}
+
+.header-contacto {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header_contacto.jpg);
+}
+
 .contenido-header h1 {
   text-align: center;
   color: #FFFFFF;
@@ -842,12 +850,63 @@ h3 {
   }
 }
 
+@media (min-width: 768px) {
+  .contenido-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    background-image: url(../img/granos_cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40%;
+  }
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formulario .campo label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.formulario .campo input:not([type=submit]),
+.formulario .campo select {
+  width: 100%;
+  padding: 1rem;
+  border: 0.3rem solid #5E311E;
+  border-radius: 0.3rem;
+}
+.formulario .campo input[type=submit] {
+  border: none;
+  background-color: #5E311E;
+  width: 100%;
+  padding: 1rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+}
+.formulario .campo input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
 .text-center {
   text-align: center;
 }
 
 .bg-primario {
   background-color: #5E311E;
+}
+
+.padding-t-0 {
+  padding-top: 0;
 }
 
 .padding-b-0 {
