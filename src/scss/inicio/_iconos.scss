@@ -1,0 +1,29 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+
+.iconos {
+    
+    margin-top: var.$separacion;
+
+    .listado-iconos {
+        @include mix.grid(1, var.$separacion);
+        @include mix.tablet {
+            @include mix.grid(3, var.$separacion);
+        }
+    }
+}
+
+.icono {
+    img {
+        margin: 0 auto;
+        width: 12rem;
+        margin-bottom: 1rem;
+    }
+    figcaption {
+        font-family: var.$fuente_cursiva;
+        font-size: 3.2rem;
+        color: var.$primario;
+        text-align: center;
+    }
+}

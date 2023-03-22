@@ -1,0 +1,29 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+
+.nuestro-testimoniales {
+    margin-top: -10rem;
+    padding: 5rem 2rem;
+    background-color: var.$blanco;
+    position: relative;
+    
+    @include mix.tablet { 
+        padding: 10rem;
+    }
+}
+
+.testimonial {
+    background-color: var.$cafe_claro;
+    padding: 2rem 4rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    .autor {
+        text-align: right;
+        font-size: 2.4rem;
+        font-family: var.$fuente_cursiva;
+        color: var.$primario;
+    }
+}

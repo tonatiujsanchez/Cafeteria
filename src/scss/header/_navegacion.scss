@@ -1,0 +1,32 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+@use 'sass:math';
+
+
+.nav-principal {
+    display: flex;
+    flex-direction: column;
+    gap: math.div( var.$separacion, 2 );
+    margin-top: var.$separacion;
+
+    .nav-enlace {
+        text-align: center;
+        color: var.$blanco;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+            color: var.$secundario;
+        }
+        
+        &.activo{
+            color: var.$secundario;
+        }
+    }
+
+    @include mix.tablet { 
+        flex-direction: row;
+        margin-top: 0;
+    }
+}

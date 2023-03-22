@@ -1,0 +1,26 @@
+@use 'variables' as var;
+
+
+@mixin mobile {
+    @media ( min-width: var.$telefono ) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media ( min-width: var.$tablet ) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media ( min-width: var.$desktop ) {
+        @content;
+    }
+}
+
+@mixin grid( $columnas, $separacion ) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $separacion;
+}

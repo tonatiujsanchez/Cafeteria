@@ -12,14 +12,17 @@ html {
 body {
     font-family: var.$fuente_principal;
     font-size: 1.6rem;
+    background-color: var.$cafe_claro;
 }
 
 p {
     color: var.$negro;
-    font-size: 2rem;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    
 }
 
-.contendor {
+.contenedor {
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
@@ -27,6 +30,7 @@ p {
 
 a {
     text-decoration: none;
+    color: var.$negro;
 }
 
 img {
@@ -34,18 +38,12 @@ img {
     display: block;
 }
 
-h1, h2, h3 {
-    margin: 0 0 var.$separacion 0;
+figure {
+    margin: 0;
 }
 
-h1 {
-    font-size: 4rem;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
-h2 {
-    font-size: 3.6rem;
-}
-
-h3 {
-    font-size: 3.2rem;
-} 

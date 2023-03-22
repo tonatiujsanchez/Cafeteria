@@ -1,0 +1,61 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+h1, h2, h3 {
+    font-family: var.$fuente_principal;
+    margin: 0 0 var.$separacion 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    color:var.$primario;   
+    margin-bottom: 2rem;
+
+    span {
+        color:var.$secundario;
+        font-size: 1.8rem;
+        display: block;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        background-image: url(../img/cafe.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin: 0 auto;
+    }
+
+    @include mix.tablet { 
+        font-size: 3.6rem;
+    }
+}
+
+.heading-blanco {
+    @extend h2;
+    color: var.$blanco;
+    
+    span {
+        color: var.$blanco;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+    

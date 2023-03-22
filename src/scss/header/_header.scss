@@ -1,1 +1,44 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+@use 'sass:math';
 
+
+.header {
+    padding: var.$separacion 0;
+
+    @include mix.mobile { 
+        padding-left: 5rem;
+    }
+
+    @include mix.tablet { 
+        min-height: 75rem;
+    }
+
+}
+
+// Header de cada página
+.header-inicio {
+    background-image: linear-gradient( rgba(0,0,0, 0.6), rgba(0,0,0, 0.6) ), url(../img/header_inicio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.contenido-header {
+    h1 {
+        text-align: center;
+        color: var.$blanco;
+        text-transform: uppercase;
+        margin-top: var.$separacion;
+        font-size: 3rem;
+        line-height: 1.5;
+        font-family: var.$fuente_secundaria;
+        font-weight: normal;
+
+        @include mix.tablet { 
+            margin-top: calc( var.$separacion * 2 );
+            font-size: 4rem;
+        }
+    }
+}
